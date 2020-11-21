@@ -18,73 +18,76 @@ int main(void){
 }
 
 
-////MIGOCZ•CA DIODA - OPIS BITOWY
+// GITHUB TEST
+
+
+////MIGOCZƒÑCA DIODA - OPIS BITOWY
 //#include <avr/io.h>
 //#include <util/delay.h>
 //
 //int main(void){
-//	DDRB = 0b00000100;  //ustawienie bitu nr 2 rejestru kierunku DDR portu B na wyjúcie
-//						//1 - wyjúcie, 0 - wejúcie, domyúlnie ca≥y rejestr ustawiony jako wejúcie
+//	DDRB = 0b00000100;  //ustawienie bitu nr 2 rejestru kierunku DDR portu B na wyj≈õcie
+//						//1 - wyj≈õcie, 0 - wej≈õcie, domy≈õlnie ca≈Çy rejestr ustawiony jako wej≈õcie
 //	while(1){
-//		PORTB = 0b00000000;	//ustaw bity rejestru wyjúciowego PORT portu B na stan niski (0)
-//							//domyúlnie ca≥y rejestr ustawiony na 0, podanie stanu niskiego (0)
-//							//przy pod≥πczeniu diody katodπ do GND spowoduje jej zapalenie
-//							//podanie stanu wyskokiego (1) zgaúniÍcie
-//		_delay_ms(1000);	//czas úwiecenia diody
-//		PORTB = 0b00000100; //ustaw bit nr 2 rejestru wyjúciowego PORT portu B na stan wysoki (1)
-//							//- zgaú diodÍ
+//		PORTB = 0b00000000;	//ustaw bity rejestru wyj≈õciowego PORT portu B na stan niski (0)
+//							//domy≈õlnie ca≈Çy rejestr ustawiony na 0, podanie stanu niskiego (0)
+//							//przy pod≈ÇƒÖczeniu diody katodƒÖ do GND spowoduje jej zapalenie
+//							//podanie stanu wyskokiego (1) zga≈õniƒôcie
+//		_delay_ms(1000);	//czas ≈õwiecenia diody
+//		PORTB = 0b00000100; //ustaw bit nr 2 rejestru wyj≈õciowego PORT portu B na stan wysoki (1)
+//							//- zga≈õ diodƒô
 //		_delay_ms(1000);	//czas zgaszenia diody
 //	}
 //}
 
 
-////OBS£UGA KLAWISZA - OPIS BITOWY
+////OBS≈ÅUGA KLAWISZA - OPIS BITOWY
 //#include <avr/io.h>
 //#include <util/delay.h>
 //#include <stdbool.h>
 //
 //int main(void)
 //{
-//	DDRB = 0b00000100;  	//ustawienie bitu nr 2 rejestru kierunku DDR portu B jako wyjúcie (dioda),
-//							//a bit nr 3 i pozosta≥e bity jako wejúcie (przycisk)
-//							//1 - wyjúcie, 0 - wejúcie, domyúlnie ca≥y rejestr ustawiony jako wejúcie
-//	PORTB = 0b11111111;		//ustawnienie poczπtkowych wartoúci rejestru wyjúciowego - dioda zgaszona na
-//							//bice nr 2 - stan wysoki 1 i podciπgniÍcie lini wejúciowej na pozosta≥ych
-//							//bitach - wymuszenie stanu wysokiego 1 (VCC) na wejúciu (podciπganie do VCC)
+//	DDRB = 0b00000100;  	//ustawienie bitu nr 2 rejestru kierunku DDR portu B jako wyj≈õcie (dioda),
+//							//a bit nr 3 i pozosta≈Çe bity jako wej≈õcie (przycisk)
+//							//1 - wyj≈õcie, 0 - wej≈õcie, domy≈õlnie ca≈Çy rejestr ustawiony jako wej≈õcie
+//	PORTB = 0b11111111;		//ustawnienie poczƒÖtkowych warto≈õci rejestru wyj≈õciowego - dioda zgaszona na
+//							//bice nr 2 - stan wysoki 1 i podciƒÖgniƒôcie lini wej≈õciowej na pozosta≈Çych
+//							//bitach - wymuszenie stanu wysokiego 1 (VCC) na wej≈õciu (podciƒÖganie do VCC)
 //
-////	PINB = 0b11111111;		//po podciπgniÍciu do VCC tak wyglπda rejestr wejúciowy PINB
+////	PINB = 0b11111111;		//po podciƒÖgniƒôciu do VCC tak wyglƒÖda rejestr wej≈õciowy PINB
 //
-////	LED_ON = 0b00001000;	//ustawienie bitu nr 2 wyjúciowego PORT portu B na stan niski - za≥πczenie diody
-////							//oraz ustawienie bitu nr 3 na stan wysoki - podciπgniÍcie lini wejúciowej za
-////							//pomocπ wewnÍtrznego rezystora do VCC
-////							//dioda úwieci
+////	LED_ON = 0b00001000;	//ustawienie bitu nr 2 wyj≈õciowego PORT portu B na stan niski - za≈ÇƒÖczenie diody
+////							//oraz ustawienie bitu nr 3 na stan wysoki - podciƒÖgniƒôcie lini wej≈õciowej za
+////							//pomocƒÖ wewnƒôtrznego rezystora do VCC
+////							//dioda ≈õwieci
 ////	LED_OFF = 0b00001100; 	//dioda zgaszona
 //
-//	bool A = 1; //zmienna boolowska, ktÛra ma za zadanie pamiÍtac czy dioda jest zapalona 1 = tak
+//	bool A = 1; //zmienna boolowska, kt√≥ra ma za zadanie pamiƒôtac czy dioda jest zapalona 1 = tak
 //
 //	while(1)
 //	{
-//		//sprawdzenie jaki stan panuje na bicie nr 3 rejestru wyjúciowego - jeúli 0 - stan niski
-//		//przycisk jest wciúniÍty i dioda zgaszona
+//		//sprawdzenie jaki stan panuje na bicie nr 3 rejestru wyj≈õciowego - je≈õli 0 - stan niski
+//		//przycisk jest wci≈õniƒôty i dioda zgaszona
 //		if ((PINB == 0b11110111) & (A == 1))
 //		{
-//			_delay_ms(80);	//czas drgaÒ stykÛw
+//			_delay_ms(80);	//czas drga≈Ñ styk√≥w
 //			if ((PINB == 0b11110111) & (A == 1))
 //			{
 //				PORTB = 0b11111011; //zapal diode
-////				_delay_ms(1000);	//czas úwiecenia diody
+////				_delay_ms(1000);	//czas ≈õwiecenia diody
 //				A = 0;
 //			}
 //		}
 //
-//		//sprawdzenie jaki stan panuje na bicie nr 3 rejestru wyjúciowego - jeúli 0 - stan niski
-//		//przycisk jest wciúniÍty i dioda zapalona
+//		//sprawdzenie jaki stan panuje na bicie nr 3 rejestru wyj≈õciowego - je≈õli 0 - stan niski
+//		//przycisk jest wci≈õniƒôty i dioda zapalona
 //		if ((PINB == 0b11110011) & (A == 0))
 //		{
-//			_delay_ms(80);	//czas drgaÒ stykÛw
+//			_delay_ms(80);	//czas drga≈Ñ styk√≥w
 //			if ((PINB == 0b11110011) & (A == 0))
 //			{
-//				PORTB = 0b11111111;  //zgaú diodÍ
+//				PORTB = 0b11111111;  //zga≈õ diodƒô
 ////				_delay_ms(100);	//czas zgaszenia diody
 //				A = 1;
 //			}
@@ -94,19 +97,19 @@ int main(void){
 //}
 
 
-////MIGOCZ•CA DIODA - MAKRA
+////MIGOCZƒÑCA DIODA - MAKRA
 //#include <avr/io.h>
 //#include <util/delay.h>
 //
-//#define LED_PIN1 (1<<PB0 | 1<<PB2) 	//definicja pinu, do ktÛrego pod≥πczona jest dioda
-//#define LED_PIN2 (1<<PB1) 			//definicja pinu, do ktÛrego pod≥πczona jest dioda
-//#define LED_ON PORTB &= ~LED_PIN1 	//ustaw stan niski na pine - zapal diodÍ
-//#define LED_OFF PORTB |= LED_PIN1	//ustaw stan wysoki na pinie - zgaú diodÍ
+//#define LED_PIN1 (1<<PB0 | 1<<PB2) 	//definicja pinu, do kt√≥rego pod≈ÇƒÖczona jest dioda
+//#define LED_PIN2 (1<<PB1) 			//definicja pinu, do kt√≥rego pod≈ÇƒÖczona jest dioda
+//#define LED_ON PORTB &= ~LED_PIN1 	//ustaw stan niski na pine - zapal diodƒô
+//#define LED_OFF PORTB |= LED_PIN1	//ustaw stan wysoki na pinie - zga≈õ diodƒô
 //#define LED_TOG PORTB ^= LED_PIN2 	//zmien stan na pinie
 //
 //int main(void)
 //{
-//	DDRB |= (LED_PIN1 | LED_PIN2); 	//ustaw stan wysoki na pinach - ustaw pin jako wyjúcia
+//	DDRB |= (LED_PIN1 | LED_PIN2); 	//ustaw stan wysoki na pinach - ustaw pin jako wyj≈õcia
 //	while(1)
 //	{
 //		LED_TOG;
@@ -118,13 +121,13 @@ int main(void){
 //}
 
 
-////OBS£UGA KLAWISZA - MAKRA
+////OBS≈ÅUGA KLAWISZA - MAKRA
 //#include <avr/io.h>
 //#include <util/delay.h>
 //
-//#define LED_PIN (1<<PB0) 			//definicja pinu, do ktÛrego pod≥πczona jest dioda
-//#define KEY_PIN (1<<PB1)			//definicja pinu, do ktÛrego pod≥πczony jest przycisk
-//#define KEY_DOWN !(PINB & KEY_PIN) 	//makro sprawdzajπce czy przycisk jest wcisniety - czy jest stan niski na pinie
+//#define LED_PIN (1<<PB0) 			//definicja pinu, do kt√≥rego pod≈ÇƒÖczona jest dioda
+//#define KEY_PIN (1<<PB1)			//definicja pinu, do kt√≥rego pod≈ÇƒÖczony jest przycisk
+//#define KEY_DOWN !(PINB & KEY_PIN) 	//makro sprawdzajƒÖce czy przycisk jest wcisniety - czy jest stan niski na pinie
 //#define LED_TOG PORTB ^= LED_PIN	//zmien stan na diodzie
 //
 //
@@ -132,16 +135,16 @@ int main(void){
 //{
 //	//inicjalizacja
 //	DDRB |= LED_PIN;				//ustaw na wyjscie pin z dioda
-//	PORTB |= LED_PIN;				//zgaú diodÍ
+//	PORTB |= LED_PIN;				//zga≈õ diodƒô
 //
-//	DDRB &= ~KEY_PIN;				//ustaw na wejúcie pin z przyciskiem
-//	PORTB |= KEY_PIN;				//podciπgnij pod VCC
+//	DDRB &= ~KEY_PIN;				//ustaw na wej≈õcie pin z przyciskiem
+//	PORTB |= KEY_PIN;				//podciƒÖgnij pod VCC
 //
 //	while(1)
 //	{
 //		if(KEY_DOWN)				//jesli klawisz wcisniety - stan niski na pinie w rejesrze PINB
 //		{
-//			_delay_ms(80);			//czas drgaÒ stykÛw
+//			_delay_ms(80);			//czas drga≈Ñ styk√≥w
 //			if(KEY_DOWN)
 //			{
 //				LED_TOG;
@@ -152,14 +155,14 @@ int main(void){
 //}
 
 
-////OBS£UGA KLAWISZA - Z FUNKCJA
+////OBS≈ÅUGA KLAWISZA - Z FUNKCJA
 //#include <avr/io.h>
 //#include <util/delay.h>
 //
-//#define LED_PIN (1<<PB0) 			//definicja pinu, do ktÛrego pod≥πczona jest dioda
-//#define KEY_PIN1 (1<<PB1)			//definicja pinu, do ktÛrego pod≥πczony jest przycisk 1
-//#define KEY_PIN2 (1<<PB2)			//definicja pinu, do ktÛrego pod≥πczony jest przycisk 2
-//#define KEY_PIN3 (1<<PB3)			//definicja pinu, do ktÛrego pod≥πczony jest przycisk 3
+//#define LED_PIN (1<<PB0) 			//definicja pinu, do kt√≥rego pod≈ÇƒÖczona jest dioda
+//#define KEY_PIN1 (1<<PB1)			//definicja pinu, do kt√≥rego pod≈ÇƒÖczony jest przycisk 1
+//#define KEY_PIN2 (1<<PB2)			//definicja pinu, do kt√≥rego pod≈ÇƒÖczony jest przycisk 2
+//#define KEY_PIN3 (1<<PB3)			//definicja pinu, do kt√≥rego pod≈ÇƒÖczony jest przycisk 3
 //#define LED_TOG PORTB ^= LED_PIN	//zmien stan na diodzie
 //#define LED_OFF PORTB |= LED_PIN	//zgas diode
 //#define LED_ON PORTB &= ~LED_PIN	//zapal diode
@@ -171,10 +174,10 @@ int main(void){
 //{
 //	//inicjalizacja
 //	DDRB |= LED_PIN;				//ustaw na wyjscie pin z dioda
-//	PORTB |= LED_PIN;				//zgaú diodÍ
+//	PORTB |= LED_PIN;				//zga≈õ diodƒô
 //
 //	DDRB &= ~(KEY_PIN1 | KEY_PIN2 | KEY_PIN3);
-//	//ustaw na wejúcie pin z przyciskiem
+//	//ustaw na wej≈õcie pin z przyciskiem
 //
 //	PORTB |= KEY_PIN1 | KEY_PIN2 | KEY_PIN3;
 //	//podciagnij pod VCC
