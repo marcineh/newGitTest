@@ -22,6 +22,8 @@ int main(void){
 
 // GITHUB TEST1
 
+// GITHUB TEST2
+
 
 ////MIGOCZĄCA DIODA - OPIS BITOWY
 //#include <avr/io.h>
